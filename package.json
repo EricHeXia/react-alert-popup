@@ -1,0 +1,28 @@
+{
+  "name": "react-alert-popup",
+  "description": "Alert/Prompt popup for react project",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EricHeXia/react-alert-popup.git"
+  },
+  "version": "0.0.3",
+  "homepage": "",
+  "devDependencies": {
+
+  },
+  "dependencies": {
+    "react": "^15.5.0"
+  },
+  "engines": {
+    "node": "6.11.0"
+  },
+  "license": "MIT",
+  "babel": {
+    "presets": [
+      "react-app"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  }
+}
