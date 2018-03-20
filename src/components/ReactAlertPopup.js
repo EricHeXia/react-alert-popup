@@ -12,7 +12,7 @@ class ReactAlertPopup extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {show:false,showConfirmButton:true,showCancelButton:false,type:"warning"};
+    this.state = {show:false,showConfirmButton:true,showCancelButton:false,type:"warning",buttonPaddingTop:15};
   }
 
   componentWillReceiveProps(props) {
@@ -26,7 +26,7 @@ class ReactAlertPopup extends Component {
 
     this.setState({show:props.show,showConfirmButton:props.showConfirmButton !== undefined?props.showConfirmButton:true,
       showCancelButton:props.showCancelButton !== undefined?props.showCancelButton:false,
-      type:type});
+      type:type,buttonPaddingTop: props.buttonPaddingTop !== undefined ? props.buttonPaddingTop:15});
   };
 
   onConfirm  = () => {
@@ -48,7 +48,7 @@ class ReactAlertPopup extends Component {
           </div>
 
           <div className="alert_text"><h5>{this.props.text}</h5></div>
-          <div className="text-nowrap" style={{paddingTop:15}}>
+          <div className="text-nowrap" style={{paddingTop:this.state.buttonPaddingTop}}>
           <input type="button"
                  className="alert_btn"
                   onClick={this.onConfirm} value={LocalizedStrings.ok}/>
